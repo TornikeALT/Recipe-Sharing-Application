@@ -22,6 +22,28 @@
         "Let it rest for 5 minutes before serving."
       ],
       "thumbnail": "/public/beef-steak.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Chicken Steak",
+      "description": "View and rate Marietta's  recipe for making delicious chicken steak.",
+      "ingredients": [
+        { "name": "Chicken fillet", "amount": "1kg" },
+        { "name": "tomato", "amount": "0.5kg" },
+        { "name": "Cheese Sulguni", "amount": "0.4 kg" },
+        { "name": "Mashroom marinade", "amount": "0.3kg" },
+        { "name": "ham", "amount": "0.2kg" },
+        { "name": "salt", "amount": "1 tsp" }
+      ],
+
+      "instructions": [
+        "Lightly fry the chicken fillet",
+        "Boil it and cut it in half (the size of a steak).",
+        "Sprinkle with salt",
+        "Put round slices of tomato on top, a few marinated mushrooms.",
+        "Put the ham, and finally a large piece of sulguni."
+      ],
+      "thumbnail": "/public/chicken-steak.jpg"
     }
   ]
 }
