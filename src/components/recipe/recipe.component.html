@@ -1,0 +1,5 @@
+<div *ngFor="let recipe of recipes" class="recipe">
+  <h3>{{ recipe.title }}</h3>
+  <img [src]="recipe.thumbnail" alt="{{ recipe.thumbnail }}" />
+  <p>{{ recipe.description }}</p>
+</div>

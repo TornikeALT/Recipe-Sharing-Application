@@ -1,24 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Recipe } from '../../interfaces/recipe';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RecipeComponent } from '../../components/recipe/recipe.component';
 
 @Component({
   selector: 'app-recipe-list',
-  imports: [CommonModule],
+  imports: [CommonModule, RecipeComponent],
   templateUrl: './recipe-list.component.html',
   styleUrl: './recipe-list.component.css',
 })
-export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
-
-  constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    this.http
-      .get<Recipe[]>('http://localhost:3000/recipes')
-      .subscribe((data) => {
-        this.recipes = data;
-      });
-  }
-}
+export class RecipeListComponent {}

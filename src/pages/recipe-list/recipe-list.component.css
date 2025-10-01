@@ -1,0 +1,5 @@
+.recipes {
+  display: flex;
+  gap: 2rem;
+  margin-top: 8rem;
+}
