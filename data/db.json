@@ -1,0 +1,27 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Best Beef Steak",
+      "description": "Tender and juicy grilled steak with the best marinade and distinctive flavor.",
+      "ingredients": [
+        { "name": "Beef", "amount": "0.5kg" },
+        { "name": "Olive Oil", "amount": "2 tsp" },
+        { "name": "Garlic", "amount": "1 tsp" },
+        { "name": "Pepper", "amount": "1 tsp" },
+        { "name": "Soy Sauce", "amount": "1/2 cup" },
+        { "name": "Ketchup", "amount": "2 tsp" },
+        { "name": "Oregano", "amount": "1 tsp" }
+      ],
+
+      "instructions": [
+        "Mix all marinade ingredients in a bowl.",
+        "Marinate the beef for at least 2 hours.",
+        "Preheat the grill or pan to high heat.",
+        "Cook the beef on both sides until done.",
+        "Let it rest for 5 minutes before serving."
+      ],
+      "thumbnail": "/public/beef-steak.jpg"
+    }
+  ]
+}
