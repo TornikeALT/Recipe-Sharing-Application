@@ -1,0 +1,32 @@
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  margin-top: 8rem;
+}
+.ingredients {
+  margin-right: 4rem;
+}
+
+.ingredients li,
+.instructions li {
+  padding: 10px;
+}
+.instructions {
+  margin-right: 4rem;
+}
+.instructions_title {
+  margin-top: 2rem;
+}
+
+.ingredients_title,
+.instructions_title {
+  font-size: 2rem;
+  border-bottom: 3px solid purple;
+}
+img {
+  padding-left: 8rem;
+  max-width: 850px;
+  width: 100%;
+}

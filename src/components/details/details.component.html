@@ -1,4 +1,20 @@
-<div>
-  <h3>{{ recipe.title }}</h3>
-  <span>{{ recipe.description }}</span>
+<div *ngIf="recipe; else loading" class="details">
+  <div>
+    <h4 class="ingredients_title">Ingredients</h4>
+    <ul class="ingredients">
+      <li *ngFor="let ingredient of recipe.ingredients">
+        <span>{{ ingredient.name }} - {{ ingredient.amount }}</span>
+      </li>
+    </ul>
+    <h4 class="instructions_title">Recipe preparation steps</h4>
+    <ul class="instructions">
+      <li *ngFor="let step of recipe.instructions">
+        {{ step }}
+      </li>
+    </ul>
+  </div>
+  <img src="{{ recipe.thumbnail }}" alt="{{ recipe.thumbnail }}" />
 </div>
+<ng-template #loading>
+  <p>Loading recipe...</p>
+</ng-template>
