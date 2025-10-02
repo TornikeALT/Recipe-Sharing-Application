@@ -18,4 +18,16 @@ export class RecipeService {
   getRecipeById(id: string | null): Observable<Recipe> {
     return this.http.get<Recipe>(`${this.jsonUrl}/${id}`);
   }
+
+  addRecipe(recipe: Recipe): Observable<Recipe> {
+    return this.http.post<Recipe>(this.jsonUrl, recipe);
+  }
+
+  deleteRecipe(id: string | null): Observable<Recipe> {
+    return this.http.delete<Recipe>(`${this.jsonUrl}/${id}`);
+  }
+
+  updateRecipe(id: string | null, recipe: Recipe): Observable<Recipe> {
+    return this.http.put<Recipe>(`${this.jsonUrl}/${id}`, recipe);
+  }
 }

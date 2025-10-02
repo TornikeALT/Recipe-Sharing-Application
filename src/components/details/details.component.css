@@ -7,6 +7,7 @@
 }
 .ingredients {
   margin-right: 4rem;
+  padding-top: 1rem;
 }
 
 .ingredients li,
@@ -15,6 +16,8 @@
 }
 .instructions {
   margin-right: 4rem;
+  padding-top: 1rem;
+  list-style: n;
 }
 .instructions_title {
   margin-top: 2rem;
