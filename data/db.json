@@ -5,15 +5,35 @@
       "title": "Best Beef Steak",
       "description": "Tender and juicy grilled steak with the best marinade and distinctive flavor.",
       "ingredients": [
-        { "name": "Beef", "amount": "0.5kg" },
-        { "name": "Olive Oil", "amount": "2 tsp" },
-        { "name": "Garlic", "amount": "1 tsp" },
-        { "name": "Pepper", "amount": "1 tsp" },
-        { "name": "Soy Sauce", "amount": "1/2 cup" },
-        { "name": "Ketchup", "amount": "2 tsp" },
-        { "name": "Oregano", "amount": "1 tsp" }
+        {
+          "name": "Beef",
+          "amount": "0.5kg"
+        },
+        {
+          "name": "Olive Oil",
+          "amount": "2 tsp"
+        },
+        {
+          "name": "Garlic",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Pepper",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Soy Sauce",
+          "amount": "1/2 cup"
+        },
+        {
+          "name": "Ketchup",
+          "amount": "2 tsp"
+        },
+        {
+          "name": "Oregano",
+          "amount": "1 tsp"
+        }
       ],
-
       "instructions": [
         "Mix all marinade ingredients in a bowl.",
         "Marinate the beef for at least 2 hours.",
@@ -28,14 +48,31 @@
       "title": "Chicken Steak",
       "description": "View and rate Marietta's  recipe for making delicious chicken steak.",
       "ingredients": [
-        { "name": "Chicken fillet", "amount": "1kg" },
-        { "name": "tomato", "amount": "0.5kg" },
-        { "name": "Cheese Sulguni", "amount": "0.4 kg" },
-        { "name": "Mashroom marinade", "amount": "0.3kg" },
-        { "name": "ham", "amount": "0.2kg" },
-        { "name": "salt", "amount": "1 tsp" }
+        {
+          "name": "Chicken fillet",
+          "amount": "1kg"
+        },
+        {
+          "name": "tomato",
+          "amount": "0.5kg"
+        },
+        {
+          "name": "Cheese Sulguni",
+          "amount": "0.4 kg"
+        },
+        {
+          "name": "Mashroom marinade",
+          "amount": "0.3kg"
+        },
+        {
+          "name": "ham",
+          "amount": "0.2kg"
+        },
+        {
+          "name": "salt",
+          "amount": "1 tsp"
+        }
       ],
-
       "instructions": [
         "Lightly fry the chicken fillet",
         "Boil it and cut it in half (the size of a steak).",
@@ -44,6 +81,51 @@
         "Put the ham, and finally a large piece of sulguni."
       ],
       "thumbnail": "/chicken-steak.jpg"
+    },
+    {
+      "id": "d5f4",
+      "title": "test",
+      "description": "ggggg",
+      "ingredients": [
+        {
+          "name": "ggggg",
+          "amount": "gggg"
+        },
+        {
+          "name": "gggg",
+          "amount": "2222"
+        },
+        {
+          "name": "",
+          "amount": ""
+        }
+      ],
+      "instructions": [
+        "ggggggggg",
+        "ggggg",
+        ""
+      ],
+      "thumbnail": "/94df79ee-6a17-475b-9fe1-6d0723b1f1dc.jpg"
+    },
+    {
+      "id": "7b8b",
+      "title": "xinkali",
+      "description": "seriozulia",
+      "ingredients": [
+        {
+          "name": "xorci",
+          "amount": "0.5kg"
+        },
+        {
+          "name": "",
+          "amount": ""
+        }
+      ],
+      "instructions": [
+        "xarshav",
+        ""
+      ],
+      "thumbnail": "/received_461633084563464.jpeg"
     }
   ]
 }

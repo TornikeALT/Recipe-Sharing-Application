@@ -1,0 +1,38 @@
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="">Title</label>
+    <input type="text" formControlName="title" />
+  </div>
+  <div>
+    <label>Description</label>
+    <input type="text" formControlName="description" />
+  </div>
+  <div formArrayName="ingredients">
+    <label>Ingredients</label>
+    <div
+      *ngFor="let ing of ingredients.controls; let i = index"
+      [formGroupName]="i"
+    >
+      <input type="text" placeholder="Name" formControlName="name" />
+      <input type="text" placeholder="Amount" formControlName="amount" />
+      <button type="button" (click)="removeIngredient(i)">Remove</button>
+    </div>
+    <button type="button" (click)="addIngredient()">Add Ingredient</button>
+  </div>
+  <div formArrayName="instructions">
+    <label>Instructions</label>
+    <div *ngFor="let inst of instructions.controls; let i = index">
+      <input type="text" [formControlName]="i" />
+      <button type="button" (click)="removeInstruction(i)">Remove</button>
+    </div>
+    <button type="button" (click)="addInstruction()">Add Instruction</button>
+  </div>
+
+  <div>
+    <label>Thumbnail</label>
+    <input type="file" (change)="onFileSelected($event)" />
+    <img *ngIf="preview" [src]="preview" alt="Preview" width="150" />
+  </div>
+
+  <button type="submit">Add Recipe</button>
+</form>

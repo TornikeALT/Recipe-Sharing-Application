@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NewComponent } from '../../components/new/new.component';
+import { NewRecipeComponent } from '../../components/new-recipe/new-recipe.component';
 
 @Component({
   selector: 'app-recipe-form',
-  imports: [NewComponent],
+  imports: [NewRecipeComponent],
   templateUrl: './recipe-form.component.html',
   styleUrl: './recipe-form.component.css',
 })

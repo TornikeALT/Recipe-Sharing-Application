@@ -8,6 +8,9 @@
 }
 .recipe img {
   padding: 2rem 0;
+  max-width: 800px;
+  width: 100%;
+  min-height: 500px;
 }
 .recipe:hover {
   cursor: pointer;
