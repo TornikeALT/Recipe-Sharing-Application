@@ -9,6 +9,7 @@ import {
 import { RecipeService } from '../../services/recipe.service';
 import { Recipe } from '../../interfaces/recipe';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-recipe',
@@ -21,7 +22,11 @@ export class NewRecipeComponent {
   selectedFile: File | null = null;
   preview: string = '';
 
-  constructor(private fb: FormBuilder, private recipeService: RecipeService) {
+  constructor(
+    private fb: FormBuilder,
+    private recipeService: RecipeService,
+    private router: Router
+  ) {
     this.recipeForm = this.fb.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
@@ -77,8 +82,9 @@ export class NewRecipeComponent {
       instructions: formValue.instructions,
       thumbnail: this.selectedFile ? `/${this.selectedFile.name}` : '',
     };
-    this.recipeService.addRecipe(recipe).subscribe(() => {
+    this.recipeService.addRecipe(recipe).subscribe((newRecipe) => {
       alert('recipe add');
+      this.router.navigate(['/recipe-details', newRecipe.id]);
       this.recipeForm.reset();
       this.preview = '';
     });
