@@ -14,6 +14,7 @@
     </ul>
   </div>
   <img src="{{ recipe.thumbnail }}" alt="{{ recipe.thumbnail }}" />
+  <button (click)="handleDeleteRecipe(recipe.id)">Delete</button>
 </div>
 <ng-template #loading>
   <p>Loading recipe...</p>

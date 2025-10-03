@@ -81,51 +81,6 @@
         "Put the ham, and finally a large piece of sulguni."
       ],
       "thumbnail": "/chicken-steak.jpg"
-    },
-    {
-      "id": "d5f4",
-      "title": "test",
-      "description": "ggggg",
-      "ingredients": [
-        {
-          "name": "ggggg",
-          "amount": "gggg"
-        },
-        {
-          "name": "gggg",
-          "amount": "2222"
-        },
-        {
-          "name": "",
-          "amount": ""
-        }
-      ],
-      "instructions": [
-        "ggggggggg",
-        "ggggg",
-        ""
-      ],
-      "thumbnail": "/94df79ee-6a17-475b-9fe1-6d0723b1f1dc.jpg"
-    },
-    {
-      "id": "7b8b",
-      "title": "xinkali",
-      "description": "seriozulia",
-      "ingredients": [
-        {
-          "name": "xorci",
-          "amount": "0.5kg"
-        },
-        {
-          "name": "",
-          "amount": ""
-        }
-      ],
-      "instructions": [
-        "xarshav",
-        ""
-      ],
-      "thumbnail": "/received_461633084563464.jpeg"
     }
   ]
 }
