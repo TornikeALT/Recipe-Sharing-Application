@@ -1,22 +1,32 @@
 <div *ngIf="recipe; else loading" class="details">
-  <div>
-    <h4 class="ingredients_title">Ingredients</h4>
-    <ul class="ingredients">
-      <li *ngFor="let ingredient of recipe.ingredients">
-        <span>{{ ingredient.name }} {{ ingredient.amount }}</span>
-      </li>
-    </ul>
-    <h4 class="instructions_title">Recipe preparation steps</h4>
-    <ul class="instructions">
-      <li *ngFor="let step of recipe.instructions">
-        {{ step }}
-      </li>
-    </ul>
+  <div class="details_content">
+    <div class="text_section">
+      <h4 class="ingredients_title">Ingredients</h4>
+      <ul class="ingredients">
+        <li *ngFor="let ingredient of recipe.ingredients">
+          <span>{{ ingredient.name }} {{ ingredient.amount }}</span>
+        </li>
+      </ul>
+
+      <h4 class="instructions_title">Recipe preparation steps</h4>
+      <ul class="instructions">
+        <li *ngFor="let step of recipe.instructions">{{ step }}</li>
+      </ul>
+
+      <div class="actions">
+        <a [routerLink]="['/recipe-edit', recipe.id]" class="edit_btn">Edit</a>
+        <button (click)="handleDeleteRecipe(recipe.id)" class="delete_btn">
+          Delete
+        </button>
+      </div>
+    </div>
+
+    <div class="image_section">
+      <img [src]="recipe.thumbnail" alt="{{ recipe.title }}" />
+    </div>
   </div>
-  <img src="{{ recipe.thumbnail }}" alt="{{ recipe.thumbnail }}" />
-  <button (click)="handleDeleteRecipe(recipe.id)">Delete</button>
-  <a [routerLink]="['/recipe-edit', recipe.id]">Edit Recipe</a>
 </div>
+
 <ng-template #loading>
-  <p>Loading recipe...</p>
+  <p class="loading_message">Loading recipe...</p>
 </ng-template>

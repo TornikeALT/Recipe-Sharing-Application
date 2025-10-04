@@ -1,35 +1,110 @@
 .details {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1rem;
-  margin-top: 8rem;
-}
-.ingredients {
-  margin-right: 4rem;
-  padding-top: 1rem;
+  padding: 2rem;
+  margin-top: 6rem;
 }
 
-.ingredients li,
-.instructions li {
-  padding: 10px;
+.details_content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
 }
-.instructions {
-  margin-right: 4rem;
-  padding-top: 1rem;
-  list-style: n;
+
+.text_section {
+  flex: 1 1 400px;
+  max-width: 600px;
 }
-.instructions_title {
-  margin-top: 2rem;
+
+.image-section {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.image_section img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .ingredients_title,
 .instructions_title {
-  font-size: 2rem;
-  border-bottom: 3px solid purple;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 3px solid #0e98d9;
+  padding-bottom: 0.3rem;
+  color: #222;
 }
-img {
-  padding-left: 8rem;
-  max-width: 850px;
-  width: 100%;
+
+.instructions_title {
+  margin-top: 2rem;
+}
+
+.ingredients,
+.instructions {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+}
+
+.ingredients li,
+.instructions li {
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.edit_btn,
+.delete_btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit_btn {
+  background-color: #e0e0e0;
+  color: #333;
+  text-decoration: none;
+}
+
+.edit_btn:hover {
+  background-color: #c6c4c4;
+}
+
+.delete_btn {
+  background-color: #f44340;
+  color: white;
+}
+
+.delete_btn:hover {
+  background-color: #de464d;
+}
+
+.loading_message {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details_content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text_section,
+  .image_section {
+    max-width: 100%;
+  }
 }
