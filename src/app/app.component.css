@@ -1,3 +1,26 @@
 h1:hover {
   cursor: pointer;
 }
+.add_new {
+  display: flex;
+  align-items: center;
+  background: white;
+  gap: 15px;
+  max-width: 200px;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.add_new:hover {
+  transform: translateY(3px);
+}
+.add_new img {
+  max-width: 40px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
