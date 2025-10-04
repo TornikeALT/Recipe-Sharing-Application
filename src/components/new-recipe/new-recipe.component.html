@@ -1,4 +1,4 @@
-<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="recipe-form">
   <div>
     <label for="title">Title</label>
     <input type="text" formControlName="title" />
@@ -49,9 +49,17 @@
       >
         Amount is required.
       </div>
-      <button type="button" (click)="removeIngredient(i)">Remove</button>
+      <button
+        type="button"
+        class="btn-inline btn-remove"
+        (click)="removeIngredient(i)"
+      >
+        Remove
+      </button>
     </div>
-    <button type="button" (click)="addIngredient()">Add Ingredient</button>
+    <button type="button" (click)="addIngredient()" class="btn-inline">
+      Add Ingredient
+    </button>
   </div>
   <div formArrayName="instructions">
     <label>Instructions</label>
@@ -60,9 +68,17 @@
       <div *ngIf="inst.invalid && inst.touched" class="error">
         Instruction is required.
       </div>
-      <button type="button" (click)="removeInstruction(i)">Remove</button>
+      <button
+        type="button"
+        (click)="removeInstruction(i)"
+        class="btn-inline btn-remove"
+      >
+        Remove
+      </button>
     </div>
-    <button type="button" (click)="addInstruction()">Add Instruction</button>
+    <button type="button" (click)="addInstruction()" class="btn-inline">
+      Add Instruction
+    </button>
   </div>
 
   <div>
