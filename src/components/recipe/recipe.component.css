@@ -30,3 +30,8 @@
   font-size: 0.9rem;
   color: #555;
 }
+@media (max-width: 768px) {
+  .recipe {
+    width: 100%;
+  }
+}
