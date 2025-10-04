@@ -25,3 +25,9 @@ header {
   padding: 1rem;
   align-items: center;
 }
+@media (max-width: 570px) {
+  header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

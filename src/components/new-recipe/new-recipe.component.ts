@@ -21,6 +21,7 @@ export class NewRecipeComponent {
   recipeForm: FormGroup;
   selectedFile: File | null = null;
   preview: string = '';
+  recipeAddedMsg: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -101,8 +102,10 @@ export class NewRecipeComponent {
       thumbnail: this.selectedFile ? `/${this.selectedFile.name}` : '',
     };
     this.recipeService.addRecipe(recipe).subscribe((newRecipe) => {
-      alert('recipe add');
-      this.router.navigate(['/recipe-details', newRecipe.id]);
+      this.recipeAddedMsg = 'New recipe successfully added!';
+      setTimeout(() => {
+        this.router.navigate(['/recipe-details', newRecipe.id]);
+      }, 3000);
       this.recipeForm.reset();
       this.preview = '';
     });

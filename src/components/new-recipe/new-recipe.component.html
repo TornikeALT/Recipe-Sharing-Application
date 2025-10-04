@@ -1,3 +1,6 @@
+<div *ngIf="recipeAddedMsg" class="notification success">
+  {{ recipeAddedMsg }}
+</div>
 <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="recipe-form">
   <div>
     <label for="title">Title</label>
