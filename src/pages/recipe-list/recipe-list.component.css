@@ -6,3 +6,27 @@
   margin-top: 8rem;
   padding: 0 1rem;
 }
+
+.recipe_item img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.search_container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.search_container input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.test {
+  background-color: white;
+  border-radius: 8px;
+}

@@ -1,3 +1,16 @@
-<div>
-  <app-recipe class="recipes" />
+<div class="search_container">
+  <input
+    type="text"
+    placeholder="Search Recipe by title or ingredient..."
+    [(ngModel)]="searchRecipe"
+    (input)="filterRecipes()"
+  />
+</div>
+
+<div class="recipes">
+  <app-recipe
+    *ngFor="let recipe of filteredRecipes"
+    [recipe]="recipe"
+    class="test"
+  />
 </div>

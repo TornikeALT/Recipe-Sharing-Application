@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Recipe } from '../../interfaces/recipe';
 import { CommonModule } from '@angular/common';
 import { RecipeService } from '../../services/recipe.service';
@@ -12,6 +12,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 })
 export class RecipeComponent implements OnInit {
   recipes: Recipe[] = [];
+  @Input() recipe!: Recipe;
 
   constructor(
     private recipeService: RecipeService,
