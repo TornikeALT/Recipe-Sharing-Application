@@ -114,9 +114,8 @@
 }
 
 .notification.success {
-  background-color: #cdddd1;
-  color: #155724;
-  border: 1px solid #7cc28c;
+  background-color: rgb(14 152 217);
+  color: white;
 }
 
 @keyframes fadeIn {

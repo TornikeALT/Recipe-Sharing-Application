@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
 export class EditRecipeComponent implements OnInit {
   recipeForm: FormGroup;
   recipeId!: string | null;
+  recipeUpdateMsg: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -110,8 +111,10 @@ export class EditRecipeComponent implements OnInit {
     this.recipeService
       .updateRecipe(this.recipeId, updatedRecipe)
       .subscribe(() => {
-        alert('Recipe Updated!');
-        this.router.navigate(['/recipe-details', this.recipeId]);
+        this.recipeUpdateMsg = 'Recipe Updated !';
+        setTimeout(() => {
+          this.router.navigate(['/recipe-details', this.recipeId]);
+        }, 2000);
       });
   }
 }
