@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipeService } from '../../services/recipe.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Recipe } from '../../interfaces/recipe';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-details',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './details.component.html',
   styleUrl: './details.component.css',
 })

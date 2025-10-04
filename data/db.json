@@ -2,36 +2,36 @@
   "recipes": [
     {
       "id": "1",
-      "title": "Best Beef Steak",
+      "title": "Best Beef Steak a",
       "description": "Tender and juicy grilled steak with the best marinade and distinctive flavor.",
       "ingredients": [
         {
           "name": "Beef",
-          "amount": "0.5kg"
+          "amount": "0.5kg "
         },
         {
           "name": "Olive Oil",
-          "amount": "2 tsp"
+          "amount": "2 tsp "
         },
         {
           "name": "Garlic",
-          "amount": "1 tsp"
+          "amount": "1 tsp "
         },
         {
           "name": "Pepper",
-          "amount": "1 tsp"
+          "amount": "1 tsp "
         },
         {
           "name": "Soy Sauce",
-          "amount": "1/2 cup"
+          "amount": "1/2 cup "
         },
         {
           "name": "Ketchup",
-          "amount": "2 tsp"
+          "amount": "2 tsp "
         },
         {
           "name": "Oregano",
-          "amount": "1 tsp"
+          "amount": "1 tsp "
         }
       ],
       "instructions": [

@@ -15,6 +15,7 @@
   </div>
   <img src="{{ recipe.thumbnail }}" alt="{{ recipe.thumbnail }}" />
   <button (click)="handleDeleteRecipe(recipe.id)">Delete</button>
+  <a [routerLink]="['/recipe-edit', recipe.id]">Edit Recipe</a>
 </div>
 <ng-template #loading>
   <p>Loading recipe...</p>
