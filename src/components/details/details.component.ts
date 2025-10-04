@@ -13,6 +13,9 @@ import { CommonModule } from '@angular/common';
 export class DetailsComponent implements OnInit {
   recipes: Recipe[] = [];
   recipe!: Recipe;
+  deleteMsg: string = '';
+  showDeleteModal: boolean = false;
+  recipeToDeleteId: string | null = null;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,14 +23,33 @@ export class DetailsComponent implements OnInit {
     private router: Router
   ) {}
 
-  handleDeleteRecipe(id: string): void {
-    if (confirm('Are you sure you want to delete this recipe?')) {
-      this.recipeService.deleteRecipe(id).subscribe(() => {
-        this.recipes = this.recipes.filter((recipe) => recipe.id !== id);
-        this.router.navigate(['/']);
-      });
-    }
+  openDeleteModal(id: string) {
+    this.recipeToDeleteId = id;
+    this.showDeleteModal = true;
   }
+
+  cancelDelete() {
+    this.recipeToDeleteId = null;
+    this.showDeleteModal = false;
+  }
+
+  confirmDelete() {
+    if (!this.recipeToDeleteId) return;
+
+    this.recipeService.deleteRecipe(this.recipeToDeleteId).subscribe(() => {
+      this.recipes = this.recipes.filter(
+        (el) => el.id !== this.recipeToDeleteId
+      );
+      this.deleteMsg = 'Recipe deleted Successfully';
+      this.showDeleteModal = false;
+      this.recipeToDeleteId = null;
+
+      setTimeout(() => {
+        this.router.navigate(['/']);
+      }, 2000);
+    });
+  }
+
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.recipeService.getRecipeById(id).subscribe((data: Recipe) => {
