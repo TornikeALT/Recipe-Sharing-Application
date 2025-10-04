@@ -1,11 +1,33 @@
 <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
   <div>
-    <label for="">Title</label>
+    <label for="title">Title</label>
     <input type="text" formControlName="title" />
+    <div
+      *ngIf="title?.invalid && (title?.dirty || title?.touched)"
+      class="error"
+    >
+      <div *ngIf="title?.errors?.['required']">Title is required.</div>
+      <div *ngIf="title?.errors?.['minlength']">
+        Title must be at least 3 characters.
+      </div>
+    </div>
   </div>
   <div>
     <label>Description</label>
     <input type="text" formControlName="description" />
+    <div
+      *ngIf="
+        description?.invalid && (description?.dirty || description?.touched)
+      "
+      class="error"
+    >
+      <div *ngIf="description?.errors?.['required']">
+        Description is required.
+      </div>
+      <div *ngIf="description?.errors?.['minlength']">
+        Description must be at least 12 characters.
+      </div>
+    </div>
   </div>
   <div formArrayName="ingredients">
     <label>Ingredients</label>
@@ -14,7 +36,19 @@
       [formGroupName]="i"
     >
       <input type="text" placeholder="Name" formControlName="name" />
+      <div
+        *ngIf="ing.get('name')?.invalid && ing.get('name')?.touched"
+        class="error"
+      >
+        Ingredient name is required.
+      </div>
       <input type="text" placeholder="Amount" formControlName="amount" />
+      <div
+        *ngIf="ing.get('amount')?.invalid && ing.get('amount')?.touched"
+        class="error"
+      >
+        Amount is required.
+      </div>
       <button type="button" (click)="removeIngredient(i)">Remove</button>
     </div>
     <button type="button" (click)="addIngredient()">Add Ingredient</button>
@@ -23,6 +57,9 @@
     <label>Instructions</label>
     <div *ngFor="let inst of instructions.controls; let i = index">
       <input type="text" [formControlName]="i" />
+      <div *ngIf="inst.invalid && inst.touched" class="error">
+        Instruction is required.
+      </div>
       <button type="button" (click)="removeInstruction(i)">Remove</button>
     </div>
     <button type="button" (click)="addInstruction()">Add Instruction</button>
@@ -31,8 +68,17 @@
   <div>
     <label>Thumbnail</label>
     <input type="file" (change)="onFileSelected($event)" />
-    <img *ngIf="preview" [src]="preview" alt="Preview" width="150" />
+    <img *ngIf="preview" [src]="preview" alt="Preview" class="thumbnail" />
+    <div
+      *ngIf="
+        recipeForm.get('thumbnail')?.invalid &&
+        recipeForm.get('thumbnail')?.touched
+      "
+      class="error"
+    >
+      <small>Thumbnail is required.</small>
+    </div>
   </div>
 
-  <button type="submit">Add Recipe</button>
+  <button type="submit" [disabled]="recipeForm.invalid">Add Recipe</button>
 </form>

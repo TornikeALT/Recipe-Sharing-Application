@@ -1,0 +1,94 @@
+.form_container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form_group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="file"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inline_group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.thumbnail {
+  margin-top: 0.5rem;
+  width: 150px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.btn_remove {
+  background: #756e6e;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_secondary {
+  background: #eee;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn_secondary:hover {
+  background: #ddd;
+}
+
+.btn_submit {
+  width: 100%;
+  background: rgb(14 152 217);
+  color: white;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn_submit:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.btn_submit:hover:not(:disabled) {
+  background: rgb(3 108 157);
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}

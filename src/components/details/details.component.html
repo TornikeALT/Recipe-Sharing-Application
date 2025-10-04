@@ -3,7 +3,7 @@
     <h4 class="ingredients_title">Ingredients</h4>
     <ul class="ingredients">
       <li *ngFor="let ingredient of recipe.ingredients">
-        <span>{{ ingredient.name }} - {{ ingredient.amount }}</span>
+        <span>{{ ingredient.name }} {{ ingredient.amount }}</span>
       </li>
     </ul>
     <h4 class="instructions_title">Recipe preparation steps</h4>

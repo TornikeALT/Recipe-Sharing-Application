@@ -1,34 +1,91 @@
-<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
-  <input type="text" formControlName="title" />
-  <input type="text" formArrayName="description" />
-  <div formArrayName="ingredients">
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="form_container">
+  <!-- Title -->
+  <div class="form_group">
+    <label for="title">Title</label>
+    <input id="title" type="text" formControlName="title" />
     <div
-      *ngFor="let ing of ingredients.controls; let i = index"
-      [formGroupName]="i"
+      *ngIf="title?.invalid && (title?.touched || title?.dirty)"
+      class="error"
     >
-      <input type="text" formControlName="name" />
-      <input type="text" formControlName="amount" />
-      <button type="button" (click)="removeIngredient(i)">Remove</button>
+      <small *ngIf="title?.errors?.['required']">Title is required.</small>
+      <small *ngIf="title?.errors?.['minlength']">Minimum 3 characters.</small>
     </div>
-    <button type="button" (click)="addIngredient()">Add Ingredient</button>
   </div>
 
-  <div formArrayName="instructions">
-    <div *ngFor="let inst of instructions.controls; let i = index">
-      <input type="text" [formControlName]="i" />
-      <button type="button" (click)="removeInstruction(i)">Remove</button>
+  <!-- Description -->
+  <div class="form_group">
+    <label for="description">Description</label>
+    <input id="description" type="text" formControlName="description" />
+    <div
+      *ngIf="
+        description?.invalid && (description?.touched || description?.dirty)
+      "
+      class="error"
+    >
+      <small *ngIf="description?.errors?.['required']"
+        >Description is required.</small
+      >
+      <small *ngIf="description?.errors?.['minlength']"
+        >Minimum 12 characters.</small
+      >
     </div>
-    <button type="button" (click)="addInstruction()">Add instruction</button>
-  </div>
-  <input type="text" formArrayName="thumbnail" readonly />
-
-  <div *ngIf="recipeForm.get('thumbnail')?.value">
-    <img
-      [src]="recipeForm.get('thumbnail')?.value"
-      alt="Thumbnail"
-      width="200"
-    />
   </div>
 
-  <button type="submit">Save</button>
+  <!-- Ingredients -->
+  <div class="form_group">
+    <label>Ingredients</label>
+    <div formArrayName="ingredients">
+      <div
+        *ngFor="let ing of ingredients.controls; let i = index"
+        [formGroupName]="i"
+        class="inline_group"
+      >
+        <input type="text" formControlName="name" placeholder="Name" />
+        <input type="text" formControlName="amount" placeholder="Amount" />
+        <button type="button" class="btn_remove" (click)="removeIngredient(i)">
+          ✕
+        </button>
+      </div>
+      <button type="button" class="btn_secondary" (click)="addIngredient()">
+        + Add Ingredient
+      </button>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="form_group">
+    <label>Instructions</label>
+    <div formArrayName="instructions">
+      <div
+        *ngFor="let inst of instructions.controls; let i = index"
+        class="inline_group"
+      >
+        <input type="text" [formControlName]="i" placeholder="Instruction" />
+        <button type="button" class="btn_remove" (click)="removeInstruction(i)">
+          ✕
+        </button>
+      </div>
+      <button type="button" class="btn_secondary" (click)="addInstruction()">
+        + Add Instruction
+      </button>
+    </div>
+  </div>
+
+  <!-- Thumbnail -->
+  <div class="form_group">
+    <div
+      *ngIf="
+        recipeForm.get('thumbnail')?.invalid &&
+        recipeForm.get('thumbnail')?.touched
+      "
+      class="error"
+    >
+      <small>Thumbnail is required.</small>
+    </div>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="btn_submit" [disabled]="recipeForm.invalid">
+    Save
+  </button>
 </form>

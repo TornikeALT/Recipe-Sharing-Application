@@ -28,11 +28,25 @@ export class NewRecipeComponent {
     private router: Router
   ) {
     this.recipeForm = this.fb.group({
-      title: ['', Validators.required],
-      description: ['', Validators.required],
-      ingredients: this.fb.array([this.fb.group({ name: '', amount: '' })]),
-      instructions: this.fb.array([this.fb.control('')]),
+      title: ['', [Validators.required, Validators.minLength(3)]],
+      description: ['', [Validators.required, Validators.minLength(12)]],
+      ingredients: this.fb.array([
+        this.fb.group({
+          name: ['', Validators.required],
+          amount: ['', Validators.required],
+        }),
+      ]),
+      instructions: this.fb.array([this.fb.control('', Validators.required)]),
+      thumbnail: ['', Validators.required],
     });
+  }
+
+  get title() {
+    return this.recipeForm.get('title');
+  }
+
+  get description() {
+    return this.recipeForm.get('description');
   }
 
   get ingredients() {
@@ -58,12 +72,16 @@ export class NewRecipeComponent {
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-
     if (input.files && input.files.length > 0) {
       this.selectedFile = input.files[0];
+
       const reader = new FileReader();
       reader.onload = () => {
         this.preview = reader.result as string;
+        this.recipeForm
+          .get('thumbnail')
+          ?.setValue(`/${this.selectedFile!.name}`);
+        this.recipeForm.get('thumbnail')?.markAsTouched();
       };
       reader.readAsDataURL(this.selectedFile);
     }

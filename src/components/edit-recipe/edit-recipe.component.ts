@@ -57,6 +57,14 @@ export class EditRecipeComponent implements OnInit {
     return this.recipeForm.get('instructions') as FormArray;
   }
 
+  get title() {
+    return this.recipeForm.get('title');
+  }
+
+  get description() {
+    return this.recipeForm.get('description');
+  }
+
   setIngredients(ingredients: { name: string; amount: string }[]) {
     this.ingredients.clear();
     ingredients.forEach((ing) => {
