@@ -42,4 +42,5 @@ Custom filtering logic – For searching recipes
 
 ### 🏠 Home Page
 
-![Home Page](screenshots/recipe.jpg)
+![Recipe Screenshot](https://github.com/username/Recipe-Sharing-Application/blob/master/screenshots/recipe.jpg?raw=true)
+
