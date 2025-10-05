@@ -2,5 +2,13 @@
   <h3>{{ recipe.title }}</h3>
   <img [src]="recipe.thumbnail" alt="{{ recipe.thumbnail }}" />
   <p>{{ recipe.description }}</p>
-  <button (click)="toggleFavourite(recipe, $event)"></button>
+  <button (click)="toggleFavourite(recipe, $event)" class="favourite-btn">
+    <span
+      class="icon"
+      [class.filled]="recipe.isFavourite"
+      [class.empty]="!recipe.isFavourite"
+    >
+      ★
+    </span>
+  </button>
 </div>

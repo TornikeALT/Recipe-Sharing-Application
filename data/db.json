@@ -193,7 +193,8 @@
         "aaaaaaaaaaaaaaaaaaaaaaaa"
       ],
       "thumbnail": "/chicken-steak.jpg",
-      "isNew": true
+      "isNew": true,
+      "isFavourite": false
     }
   ]
 }

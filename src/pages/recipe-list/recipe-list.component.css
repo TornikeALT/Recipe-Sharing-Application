@@ -68,3 +68,13 @@ button.favourite {
 .toggle_btn:active {
   transform: scale(0.97);
 }
+@media (max-width: 500px) {
+  .search_container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toggle_btn {
+    width: 100%;
+  }
+}

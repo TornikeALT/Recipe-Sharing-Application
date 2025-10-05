@@ -3,7 +3,6 @@
   background-color: #fff;
   border-radius: 8px;
   padding: 1rem;
-  /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); */
   cursor: pointer;
   transition: transform 0.2s ease;
   text-align: center;
@@ -38,4 +37,33 @@
   .recipe {
     width: 100%;
   }
+}
+.favourite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.favourite-btn .icon {
+  transition: color 0.3s;
+}
+
+.favourite-btn .filled {
+  color: rgb(14 152 217);
+}
+.favourite-btn .empty {
+  color: #bbb;
+}
+
+.favourite-btn:hover .empty {
+  color: rgb(14 152 217);
+}
+
+.favourite-btn:hover .filled {
+  color: rgb(14 152 217);
 }
