@@ -1,4 +1,4 @@
-.recipe-form {
+.recipe_form {
   max-width: 700px;
   margin: 2rem auto;
   padding: 2rem;
@@ -7,15 +7,15 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.recipe-form label {
+.recipe_form label {
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
 }
 
-.recipe-form input[type="text"],
-.recipe-form input[type="file"] {
+.recipe_form input[type="text"],
+.recipe_form input[type="file"] {
   width: 100%;
   padding: 0.6rem;
   border: 1px solid #ccc;
@@ -24,14 +24,14 @@
   margin-bottom: 0.5rem;
 }
 
-.recipe-form .error {
+.recipe_form .error {
   color: #d93025;
   font-size: 0.85rem;
   margin-top: -0.25rem;
   margin-bottom: 0.75rem;
 }
 
-.recipe-form button {
+.recipe_form button {
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
@@ -41,41 +41,37 @@
   transition: background-color 0.3s;
 }
 
-.recipe-form button[type="submit"] {
+.recipe_form button[type="submit"] {
   background-color: rgb(14 152 217);
   color: #fff;
   width: 100%;
 }
-.recipe-form button[type="submit"]:hover {
+.recipe_form button[type="submit"]:hover {
   background-color: rgb(3 108 157);
 }
 
-.recipe-form button[type="submit"]:disabled {
+.recipe_form button[type="submit"]:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
-/* .btn-remove:hover {
-  background-color: #322188;
-} */
-
-.recipe-form [formArrayName="ingredients"],
-.recipe-form [formArrayName="instructions"] {
+.recipe_form [formArrayName="ingredients"],
+.recipe_form [formArrayName="instructions"] {
   margin-top: 1rem;
 }
 
-.inline-group {
+.inline_group {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
-.inline-group input {
+.inline_group input {
   flex: 1;
 }
 
-.recipe-form .thumbnail {
+.recipe_form .thumbnail {
   display: block;
   margin-top: 0.5rem;
   width: 150px;
@@ -84,24 +80,24 @@
   border: 1px solid #ccc;
 }
 
-.recipe-form .btn-inline {
+.recipe_form .btn-inline {
   background-color: #e0e0e0;
   color: #333;
   padding: 0.4rem 0.75rem;
   border-radius: 4px;
 }
 
-.recipe-form .btn-inline:hover {
+.recipe_form .btn-inline:hover {
   background-color: #d5d5d5;
 }
 
-.recipe-form .btn-remove {
+.recipe_form .btn_remove {
   background-color: #ff4d4d;
   color: white;
   margin-bottom: 1rem;
 }
 
-.recipe-form .btn-remove:hover {
+.recipe_form .btn_remove:hover {
   background-color: #d93025;
 }
 .notification {
@@ -130,7 +126,7 @@
 }
 
 @media (max-width: 600px) {
-  .inline-group {
+  .inline_group {
     flex-direction: column;
     align-items: stretch;
   }

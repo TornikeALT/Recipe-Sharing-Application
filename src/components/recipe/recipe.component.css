@@ -38,7 +38,7 @@
     width: 100%;
   }
 }
-.favourite-btn {
+.favourite_btn {
   background: none;
   border: none;
   cursor: pointer;
@@ -49,21 +49,21 @@
   align-items: center;
 }
 
-.favourite-btn .icon {
+.favourite_btn .icon {
   transition: color 0.3s;
 }
 
-.favourite-btn .filled {
+.favourite_btn .filled {
   color: rgb(14 152 217);
 }
-.favourite-btn .empty {
+.favourite_btn .empty {
   color: #bbb;
 }
 
-.favourite-btn:hover .empty {
+.favourite_btn:hover .empty {
   color: rgb(14 152 217);
 }
 
-.favourite-btn:hover .filled {
+.favourite_btn:hover .filled {
   color: rgb(14 152 217);
 }

@@ -178,23 +178,6 @@
       ],
       "thumbnail": "/turkey.jpg",
       "isNew": false
-    },
-    {
-      "id": "0468",
-      "title": "fffffffffffffffffffff",
-      "description": "faaaaaaaaaaaaaaaaaaaa",
-      "ingredients": [
-        {
-          "name": "aaaaaaaaaaaa",
-          "amount": "aaaaaaaaaaaaa"
-        }
-      ],
-      "instructions": [
-        "aaaaaaaaaaaaaaaaaaaaaaaa"
-      ],
-      "thumbnail": "/chicken-steak.jpg",
-      "isNew": true,
-      "isFavourite": false
     }
   ]
 }
