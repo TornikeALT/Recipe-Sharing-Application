@@ -14,17 +14,29 @@
 }
 
 .search_container {
-  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   margin: 2rem auto;
-  padding: 1rem;
+  max-width: 700px;
+  padding: 0 1rem;
+  flex-wrap: wrap;
 }
 
 .search_container input {
-  width: 100%;
-  padding: 0.6rem;
+  flex: 1;
+  padding: 0.6rem 1rem;
   font-size: 1rem;
-  border-radius: 6px;
   border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+  min-width: 220px;
+}
+
+.search_container input:focus {
+  border-color: rgb(14 152 217);
+  outline: none;
 }
 .recipe {
   background-color: white;
@@ -33,4 +45,26 @@
 button.favourite {
   color: gold;
   font-weight: bold;
+}
+
+.toggle_btn {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.toggle_btn:hover {
+  background-color: rgb(14 152 217);
+  color: white;
+  border-color: rgb(14 152 217);
+}
+
+.toggle_btn:active {
+  transform: scale(0.97);
 }
