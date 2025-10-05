@@ -42,4 +42,4 @@ Custom filtering logic – For searching recipes
 
 ### 🏠 Home Page
 
-![Home Page](screenshot/screnshot.jpg)
+![Home Page](screenshots/recipe.jpg)
