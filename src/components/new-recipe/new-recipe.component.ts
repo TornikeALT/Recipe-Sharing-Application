@@ -100,6 +100,7 @@ export class NewRecipeComponent {
       ingredients: formValue.ingredients,
       instructions: formValue.instructions,
       thumbnail: this.selectedFile ? `/${this.selectedFile.name}` : '',
+      isNew: true,
     };
     this.recipeService.addRecipe(recipe).subscribe((newRecipe) => {
       this.recipeAddedMsg = 'New recipe successfully added!';

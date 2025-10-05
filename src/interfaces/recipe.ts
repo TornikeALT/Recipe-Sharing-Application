@@ -5,4 +5,5 @@ export interface Recipe {
   ingredients: { name: string; amount: string }[];
   instructions: string[];
   thumbnail: string;
+  isNew: boolean;
 }

@@ -33,7 +33,11 @@
 
       <div class="actions">
         <a [routerLink]="['/recipe-edit', recipe.id]" class="edit_btn">Edit</a>
-        <button (click)="openDeleteModal(recipe.id)" class="delete_btn">
+        <button
+          *ngIf="recipe.isNew"
+          (click)="openDeleteModal(recipe.id)"
+          class="delete_btn"
+        >
           Delete
         </button>
       </div>

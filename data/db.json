@@ -80,7 +80,8 @@
         "Put round slices of tomato on top, a few marinated mushrooms.",
         "Put the ham, and finally a large piece of sulguni."
       ],
-      "thumbnail": "/chicken-steak.jpg"
+      "thumbnail": "/chicken-steak.jpg",
+      "isNew": false
     }
   ]
 }
