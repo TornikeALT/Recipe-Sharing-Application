@@ -26,11 +26,14 @@ export class RecipeComponent implements OnInit {
     });
   }
 
-  toggleFavourite(recipe: Recipe): void {
+  toggleFavourite(recipe: Recipe, event: Event): void {
+    event.stopPropagation();
     const updatedRecipe = {
       ...recipe,
       isFavourite: !recipe.isFavourite,
     };
-    this.recipeService.updateRecipe(recipe.id, updatedRecipe).subscribe();
+    this.recipeService.updateRecipe(recipe.id, updatedRecipe).subscribe(() => {
+      recipe.isFavourite = updatedRecipe.isFavourite;
+    });
   }
 }
