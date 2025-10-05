@@ -5,6 +5,9 @@
     [(ngModel)]="searchRecipe"
     (input)="filterRecipes()"
   />
+  <button (click)="toggleFavouritesFilter()">
+    {{ showFavouritesOnly ? "Show All" : "Show Favourites" }}
+  </button>
 </div>
 
 <div class="recipes">

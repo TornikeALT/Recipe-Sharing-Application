@@ -6,4 +6,5 @@ export interface Recipe {
   instructions: string[];
   thumbnail: string;
   isNew: boolean;
+  isFavourite?: boolean;
 }

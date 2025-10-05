@@ -15,6 +15,7 @@ export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
   filteredRecipes: Recipe[] = [];
   searchRecipe: string = '';
+  showFavouritesOnly: boolean = false;
 
   constructor(private recipeService: RecipeService) {}
 
@@ -25,6 +26,11 @@ export class RecipeListComponent implements OnInit {
     });
   }
 
+  toggleFavouritesFilter() {
+    this.showFavouritesOnly = !this.showFavouritesOnly;
+    this.filterRecipes();
+  }
+
   filterRecipes() {
     const term = this.searchRecipe.toLowerCase();
 
@@ -33,7 +39,11 @@ export class RecipeListComponent implements OnInit {
       const matchesIngredient = recipe.ingredients.some((ing) =>
         ing.name.toLowerCase().includes(term)
       );
-      return mathesTitle || matchesIngredient;
+      const matchesSearch = mathesTitle || matchesIngredient;
+
+      return this.showFavouritesOnly
+        ? recipe.isFavourite && matchesSearch
+        : matchesSearch;
     });
   }
 }

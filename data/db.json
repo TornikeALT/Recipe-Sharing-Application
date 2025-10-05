@@ -41,7 +41,8 @@
         "Cook the beef on both sides until done.",
         "Let it rest for 5 minutes before serving."
       ],
-      "thumbnail": "/beef-steak.jpg"
+      "thumbnail": "/beef-steak.jpg",
+      "isFavourite": false
     },
     {
       "id": "2",
@@ -81,7 +82,118 @@
         "Put the ham, and finally a large piece of sulguni."
       ],
       "thumbnail": "/chicken-steak.jpg",
+      "isNew": false,
+      "isFavourite": false
+    },
+    {
+      "id": "aa07",
+      "title": "Pork chop with mustard",
+      "description": "Fry pork tenderloin deliciously - with grainy mustard, garlic, and various spices.",
+      "ingredients": [
+        {
+          "name": "Pork chops ",
+          "amount": "1 kg"
+        },
+        {
+          "name": "Grain mustard",
+          "amount": "2 tsp"
+        },
+        {
+          "name": "Sliced savory",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Black pepper",
+          "amount": "0.05 gr"
+        },
+        {
+          "name": "Melted butter",
+          "amount": "3 tbsp"
+        },
+        {
+          "name": "Minced garlic",
+          "amount": "3 cloves"
+        },
+        {
+          "name": "Chopped rosemary",
+          "amount": "1 tbsp"
+        },
+        {
+          "name": "Salt",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Brown sugar",
+          "amount": "1 tbsp"
+        }
+      ],
+      "instructions": [
+        "Preheat the oven to 200 C. Line a 22X33 cm baking tray with parchment paper and place a metal rack on top (the juices released during roasting will collect in the tray).",
+        " In a small bowl, combine garlic, mustard, rosemary, savory, 1 ½ tsp salt, and freshly ground black pepper. Rub the mixture well on all sides of the meat and place it flat-side down on a baking sheet. Roast for 30 minutes, then quickly turn the meat over and roast for an additional 20 minutes.",
+        "Mix the melted butter and brown sugar in a bowl and brush over the sukiyaki. Bake for another 2 minutes.",
+        "Cool for 10 minutes before slicing. Cut into 1 cm thick slices. Serve warm with its own juices."
+      ],
+      "thumbnail": "/pork.jpg",
+      "isNew": false,
+      "isFavourite": false
+    },
+    {
+      "id": "2e97",
+      "title": "Roasted turkey with mushroom sauce",
+      "description": "Roasted turkey with sauce and mushroom sauce is really delicious",
+      "ingredients": [
+        {
+          "name": "Turkey",
+          "amount": "3 kg"
+        },
+        {
+          "name": "Black pepper and cloves",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Red Wine",
+          "amount": "300 ml"
+        },
+        {
+          "name": "Bay leaves",
+          "amount": "5"
+        },
+        {
+          "name": "Mushrooms",
+          "amount": "20 pcs"
+        },
+        {
+          "name": "Rum",
+          "amount": "1 tsp"
+        },
+        {
+          "name": "Salt ",
+          "amount": "0.01gr"
+        }
+      ],
+      "instructions": [
+        "First, lightly boil the turkey until it is round, then place it in the air fryer, along with salt, herb sprigs, and 20 mushrooms. Gradually pour in its own juices, little by little.",
+        "Remove the roasted turkey to a large plate and cut into pieces. Also cut the roasted mushrooms into long pieces and put them back in the pot.",
+        "Pour in the red wine and rum, add the ground black pepper, bring to a boil, and pour into the middle of the plate on which we have the roasted turkey. Enjoy!"
+      ],
+      "thumbnail": "/turkey.jpg",
       "isNew": false
+    },
+    {
+      "id": "0468",
+      "title": "fffffffffffffffffffff",
+      "description": "faaaaaaaaaaaaaaaaaaaa",
+      "ingredients": [
+        {
+          "name": "aaaaaaaaaaaa",
+          "amount": "aaaaaaaaaaaaa"
+        }
+      ],
+      "instructions": [
+        "aaaaaaaaaaaaaaaaaaaaaaaa"
+      ],
+      "thumbnail": "/chicken-steak.jpg",
+      "isNew": true
     }
   ]
 }

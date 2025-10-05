@@ -25,4 +25,12 @@ export class RecipeComponent implements OnInit {
       this.recipes = data;
     });
   }
+
+  toggleFavourite(recipe: Recipe): void {
+    const updatedRecipe = {
+      ...recipe,
+      isFavourite: !recipe.isFavourite,
+    };
+    this.recipeService.updateRecipe(recipe.id, updatedRecipe).subscribe();
+  }
 }
